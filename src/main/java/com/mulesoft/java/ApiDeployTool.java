@@ -41,8 +41,8 @@ public class ApiDeployTool {
 						(args.length > 2) ? args[2] : "userPass", (args.length > 3) ? args[3] : "orgName",
 						(args.length > 4) ? args[4] : "apiName", (args.length > 5) ? args[5] : "apiVersion",
 						(args.length > 6) ? args[6] : "DEV", (args.length > 7) ? args[7] : "base",
-						(args.length > 8) ? args[8] : "client-credentials-policy.json",
-						(args.length > 9) ? args[9] : "client-access-list.json");
+						(args.length > 8) ? args[8] : "client-credentials-policy",
+						(args.length > 9) ? args[9] : "empty-client-access-list");
 				System.out.println(json);
 			} else {
 				printHelp();
@@ -791,9 +791,8 @@ public class ApiDeployTool {
 		}
 
 		if (result != null) {
-//			 ObjectMapper mapperw = new ObjectMapper();
-//			 System.err.println("api policies: " +
-//			 mapperw.writerWithDefaultPrettyPrinter().writeValueAsString(result));
+//			ObjectMapper mapperw = new ObjectMapper();
+//			System.err.println("api policies: " + mapperw.writerWithDefaultPrettyPrinter().writeValueAsString(result));
 			return result;
 		} else {
 			System.err.println("Failed to find API policies");
