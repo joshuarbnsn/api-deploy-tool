@@ -515,13 +515,14 @@ public class ApiDeployTool {
 				is = ApiDeployTool.class.getClassLoader().getResourceAsStream(contractsFileName);
 				contractsStr = IOUtils.toString(is, "UTF-8");
 			}
-//			System.err.println(contractStr);
+//			System.err.println(contractsStr);
 			contracts = mapper.readValue(contractsStr, type);
 
 			for (LinkedHashMap<String, Object> i : contracts) {
 				int applicationId = 0;
 				StringBuilder applicationName = new StringBuilder();
 				applicationName.append(i.get("applicationName")).append("_").append(businessGroupName).append("_").append(environmentName);
+//				System.err.println(applicationName.toString());
 				for (LinkedHashMap<String, Object> e:applications) {
 					if (e.get("name").equals(applicationName.toString())) {
 						applicationId = (int) e.get("id");
