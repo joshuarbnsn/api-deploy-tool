@@ -691,7 +691,8 @@ public class ApiDeployTool {
 			throws JsonProcessingException {
 		WebTarget target = restClient.target(HTTPS_ANYPOINT_MULESOFT_COM).path("apimanager/api/v1/organizations")
 				.path(businessGroupId).path("environments").path(environmentId).path("apis")
-				.queryParam("assetId", assetId).queryParam("assetVersion", assetVersion).queryParam("limit", 400);
+				.queryParam("assetId", assetId).queryParam("assetVersion", assetVersion).queryParam("limit", 400)
+				.queryParam("instanceLabel", "auto-api-registation-" + assetId);
 
 		Response response = target.request().header("Authorization", authorizationHdr)
 				.accept(MediaType.APPLICATION_JSON).get();
