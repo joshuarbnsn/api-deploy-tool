@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mulesoft.java</groupId>
 	<artifactId>mule-api-deploy</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>Mule API Deployment Tool</name>
 	<description>Deploy a Mule API to Anypoint Platform</description>
 	<properties>

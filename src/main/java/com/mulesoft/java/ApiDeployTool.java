@@ -32,7 +32,7 @@ public class ApiDeployTool {
 
 	public static void main(String[] args) {
 
-		System.err.println("ApiDeployTool version 1.0\n");
+		System.err.println("ApiDeployTool version 1.0.1\n");
 		try {
 			if (args.length <= 0) {
 				printHelp();
@@ -638,7 +638,7 @@ public class ApiDeployTool {
 			String apiVersion, String organizationName, String organizationId, String groupName, String groupId)
 			throws JsonProcessingException {
 
-		String assetVersion = "1.0.0";
+		String assetVersion = apiVersion;
 		StringBuilder assetId = new StringBuilder();
 		assetId.append(groupId).append("_").append(apiName).append("_").append(assetVersion);
 
